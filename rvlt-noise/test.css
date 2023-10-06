@@ -1,0 +1,141 @@
+body {
+  font-family      : SF Pro Text;
+  /* font-size     : 12px; */
+  font-size        : 0.875rem;
+  font-weight      : 400;
+  letter-spacing   : -.01em;
+  line-height      : 1;
+}
+
+*,
+*::after,
+*::before {
+  margin    : 0px;
+  padding   : 0px;
+  box-sizing: border-box;
+}
+
+* {
+  /* outline: 1px solid red !important; */
+}
+
+a {
+  text-decoration: none;
+  color          : black;
+}
+
+/* -------------------------------  */
+
+.test{
+  top:0;
+  left:0;
+  bottom: 29vw;
+  width: 97vw;
+  height:auto;
+  border-radius: 0;
+  border-bottom-left-radius: 21.8vw;
+  border-bottom-right-radius: 21.8vw;
+  transform:none;
+  position:absolute;
+  overflow: hidden;
+  filter: contrast(1.1);
+  z-index: 1;
+  background: black;
+}
+
+.test:before{
+  z-index: 9;
+  position: absolute;
+  top:-10rem;
+  left:-10rem;
+  width:calc(100% + 20rem);
+  height: calc(100% + 20rem);
+  pointer-events: none;
+  background-position: 50%;
+  background-image: url(./noise.png);
+  animation: noise 1s steps(2) infinite;
+  content:'';
+  opacity:.7;
+}
+
+@keyframes noise {
+  0% {
+      transform: translate3d(0,9rem,0)
+  }
+
+  10% {
+      transform: translate3d(-1rem,-4rem,0)
+  }
+
+  20% {
+      transform: translate3d(-8rem,2rem,0)
+  }
+
+  30% {
+      transform: translate3d(9rem,-9rem,0)
+  }
+
+  40% {
+      transform: translate3d(-2rem,7rem,0)
+  }
+
+  50% {
+      transform: translate3d(-9rem,-4rem,0)
+  }
+
+  60% {
+      transform: translate3d(2rem,6rem,0)
+  }
+
+  70% {
+      transform: translate3d(7rem,-8rem,0)
+  }
+
+  80% {
+      transform: translate3d(-9rem,1rem,0)
+  }
+
+  90% {
+      transform: translate3d(6rem,-5rem,0)
+  }
+
+  to {
+      transform: translate3d(-7rem,0,0)
+  }
+}
+
+/* img{
+  top:0;
+  object-fit: cover;
+  position:absolute;
+  left:0;
+  width:100%;
+  height:100%;
+} */
+
+.source[data-v-2b2c4a14]{
+  top:0;
+  object-fit: cover;
+  position: absolute;
+  left:0;
+  width:100%;
+  height:100%;
+}
+
+body{
+  background:black;
+}
+
+.mask{
+  position:absolute;
+  bottom:0;
+  width:41vw;
+  height:41vw;
+  clip-path: polygon(43% 0,100% 22%,91% 72%,53% 100%,0 70%);
+}
+
+img{
+  height:50%;
+  width:50%;
+  object-fit: cover;
+}
